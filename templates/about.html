@@ -1,0 +1,27 @@
+<title>About Us</title>
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid    main_container">
+
+    <div class="about_container row w-100 d-flex justify-content-center ">
+        <div class="col-lg-5 d-flex justify-content-center align-items-center">
+            <img class="about_mage img-fluid rounded-4 w-75"
+                src="{{ url_for('static', filename='assets/aboutus.jpg') }}" alt="Inventory Image">
+        </div>
+        <div class=" col-lg-5 text-center d-flex flex-column justify-content-center gap-3 px-5">
+            <h1>About Us </h1>
+            <h2>Inventory Management</h2>
+            <h6>
+                This is Inventory Management System.<br>
+                This web application helps you <strong>manage, monitor, and track</strong> your stock efficiently.
+                Created with Flask and SQLite
+            </h6>
+            <div>
+                <a href="{{ url_for('contact') }}" class="btn btn-primary p-2 px-3 rounded-5">Contacy Us</a>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+{% endblock %}

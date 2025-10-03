@@ -1,0 +1,27 @@
+<title>Home</title>
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container-fluid main_container  ">
+    <div class="home_container row w-100 d-flex justify-content-center ">
+        <!-- Left Side -->
+        <div class="col-lg-5 text-center d-flex flex-column justify-content-center gap-3 px-5">
+            <h1>Welcome! 👋</h1>
+            <h2>Inventory Management</h2>
+            <h6>
+                Welcome to the Inventory Management System.<br>
+                This web application helps you <strong>manage, monitor, and track</strong> your stock efficiently.
+            </h6>
+            <div>
+                <a href="{{ url_for('products') }}" class="btn btn-primary p-2 px-3 rounded-5">Get Started</a>
+            </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class=" image_container col-lg-5 d-flex justify-content-center align-items-center">
+            <img class="home_image img-fluid rounded-4 w-75" src="{{ url_for('static', filename='assets/inventory.jpg') }}" alt="Inventory Image">
+        </div>
+    </div>
+</div>
+
+{% endblock %}
